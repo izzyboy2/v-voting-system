@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6fc;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #5e3ae3;
+  color: white;
+  height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a.active,
+.nav a:hover {
+  background: #ffffff22;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.main {
+  margin-left: 220px;
+  flex-grow: 1;
+  padding: 20px 40px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.categories {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.category {
+  padding: 10px 20px;
+  background: #e6e9f1;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.category.active {
+  background: #5e3ae3;
+  color: white;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.candidate-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.candidate-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.candidate-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #5e3ae3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.candidate-card button:disabled {
+  background: #aaa;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+}

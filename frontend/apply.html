@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for Election</title>
+  <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h2>Create Candidate Application</h2>
+    <div class="steps">
+      <div class="step active">1. Personal Info</div>
+      <div class="step">2. Election Info</div>
+      <div class="step">3. Confirmation</div>
+    </div>
+
+    <form id="applicationForm">
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <h3>Your Profile</h3>
+        <p>Enter your personal details.</p>
+        <div class="row">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="row">
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <button type="button" class="next">Next Step →</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <h3>Election Details</h3>
+        <div class="row">
+          <input type="text" placeholder="Position Applying For" required>
+          <input type="text" placeholder="Department/Faculty" required>
+        </div>
+        <textarea placeholder="Why should students vote for you?" required></textarea>
+        <div class="nav-buttons">
+          <button type="button" class="prev">← Back</button>
+          <button type="button" class="next">Next Step →</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step">
+        <h3>Confirmation</h3>
+        <p>Please upload your ID and confirm your submission.</p>
+        <input type="file" accept="image/*,.pdf" required>
+        <div class="nav-buttons">
+          <button type="button" class="prev">← Back</button>
+          <button type="submit">Submit Application</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="back-link">
+      <a href="dashboard.html">← Back to Dashboard</a>
+    </div>
+  </div>
+
+  <script src="apply.js"></script>
+</body>
+</html>

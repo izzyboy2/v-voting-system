@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Voting Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">eVote</h2>
+      <ul class="nav">
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Candidates</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="apply.html">Apply for Loan</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <input type="text" placeholder="Search candidates..." class="search-bar" />
+        <div class="user">
+          <span>Welcome, Student</span>
+          <img src="https://via.placeholder.com/32" alt="User">
+        </div>
+      </header>
+
+      <section class="categories">
+        <button class="category active">All</button>
+        <button class="category">Science</button>
+        <button class="category">Arts</button>
+        <button class="category">Business</button>
+      </section>
+
+      <section class="candidates-grid" id="candidate-list">
+        <!-- JS will populate -->
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 eVote</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

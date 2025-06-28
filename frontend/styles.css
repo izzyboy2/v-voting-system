@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #2a003f, #41154c);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 800px;
+  min-height: 450px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 20px auto;
+}
+
+.welcome {
+  flex: 1;
+  padding: 40px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  font-size: 14px;
+  margin: 20px 0;
+  max-width: 300px;
+  color: #bbb;
+}
+
+.welcome button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.signin {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin h2 {
+  margin-bottom: 30px;
+}
+
+.signin form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+}
+
+.signin label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ccc;
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+.signin input {
+  padding: 10px;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 100%;
+  max-width: 260px;
+}
+
+.signin button {
+  padding: 10px;
+  border: none;
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  max-width: 260px;
+}
+
+.auth-link {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #fc466b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: #ffb3b3;
+  background: #4a003f;
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 260px;
+  display: none;
+}
+
+#vote-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: none;
+}
+
+#candidates-list {
+  margin: 30px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.candidate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.candidate button {
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 7px 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.candidate button[disabled] {
+  background: #888;
+  cursor: not-allowed;
+}
+
+#vote-message {
+  color: #fc466b;
+  font-size: 18px;
+  margin-bottom: 20px;
+  min-height: 24px;
+}
+
+/* Dashboard styles */
+.dashboard {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.18);
+  padding: 40px 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboard h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+  color: #fc466b;
+}
+
+.dashboard .stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard .stat-card {
+  flex: 1 1 180px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.dashboard .stat-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #3f5efb;
+}
+
+.dashboard .stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dashboard .actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.dashboard .actions button {
+  padding: 10px 22px;
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.dashboard .actions button:hover {
+  background: linear-gradient(to right, #3f5efb, #fc466b);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 98vw;
+    min-height: 600px;
+  }
+  .welcome, .signin {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Voting App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login Section -->
+    <div class="container" id="login-section">
+      <div class="welcome">
+        <div style="font-size: 24px; margin-bottom: 10px;">▣</div>
+        <h1>Welcome!</h1>
+        <p>Student Voting System. Please sign in to continue.</p>
+        <button onclick="alert('About the voting system...')">Learn More</button>
+      </div>
+      <div class="signin">
+        <h2>Sign in</h2>
+        <div id="login-error" class="error-msg" style="display:none;"></div>
+        <form id="loginForm" autocomplete="off" onsubmit="event.preventDefault(); login();">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required placeholder="Enter your email">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required placeholder="••••••••">
+          <button type="submit">Login</button>
+        </form>
+        <p class="auth-link">Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+      </div>
+    </div>
+
+    <!-- Registration Section (hidden by default) -->
+    <div class="container" id="register-section" style="display:none;">
+      <div class="welcome">
+        <div style="font-size: 24px; margin-bottom: 10px;">▣</div>
+        <h1>Register</h1>
+        <p>Create your account to vote for your class representative.</p>
+        <button onclick="showLogin()">Back to Login</button>
+      </div>
+      <div class="signin">
+        <h2>Register</h2>
+        <div id="register-error" class="error-msg" style="display:none;"></div>
+        <form id="registerForm" autocomplete="off" onsubmit="event.preventDefault(); register();">
+          <label for="registerStudentId">Student ID</label>
+          <input type="text" id="registerStudentId" required placeholder="Enter your student ID">
+          <label for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" required placeholder="Create a password">
+          <button type="submit">Register</button>
+        </form>
+        <p class="auth-link">Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+      </div>
+    </div>
+
+    <!-- Voting Section -->
+    <div id="vote-section" style="display: none;">
+      <h2>Election: Class Representative</h2>
+      <div id="candidates-list">
+        <!-- Candidates will be loaded here -->
+      </div>
+      <p id="vote-message"></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
